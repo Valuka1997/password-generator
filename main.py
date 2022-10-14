@@ -1,7 +1,7 @@
 from tkinter import *
 import string
 import random
-
+import pyperclip
 
 def pw_gen():
     selection = ''
@@ -18,6 +18,7 @@ def pw_gen():
     pwdlen = int(float(pw_length.get()))
     pwd = "".join([random.choice(selection) for _ in range(pwdlen)])
     pswdbox.insert(0, pwd)
+    pyperclip.copy(pwd)
 
 
 def chckd():
